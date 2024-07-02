@@ -1,9 +1,12 @@
+import Banar from "../Banar/Banar";
+import Catagory from "../Catagory/Catagory";
 
 
 const Home = () => {
     return (
         <div>
-            <h1>this is home</h1>
+            <Banar></Banar>
+            <Catagory></Catagory>
         </div>
     );
 };
