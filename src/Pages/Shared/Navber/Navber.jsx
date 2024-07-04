@@ -1,21 +1,18 @@
+import { Link } from "react-router-dom";
 
 
 const Navber = () => {
     const navOption = <>
-        <li><a>Item 1</a></li>
-        <li>
-            <a>Parent</a>
-            <ul className="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-            </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        <li><Link to={'/'}>Home</Link></li>
+        <li><Link to={'/contact'}>Contacts Us</Link> </li>
+        <li><Link to={'/deshboard'}>DeshBoard</Link></li>
+        <li><Link to={'/menu'}>Our Menu</Link></li>
+        <li><Link to={'/shop'}>Our Shop</Link></li>
     </>
 
     return (
         <>
-            <div className="navbar z-10 fixed bg-opacity-30 max-w-screen-xl  bg-black text-white ">
+            <div className="navbar z-10  fixed bg-opacity-40 max-w-screen-xl  bg-black text-white ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
