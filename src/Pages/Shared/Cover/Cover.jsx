@@ -1,6 +1,6 @@
 import { Parallax, Background } from 'react-parallax';
 
-const Conver = ({ img, menutitle, descrption }) => {
+const Cover = ({ img, menutitle, descrption }) => {
     return (
         <Parallax
             blur={{ min: -50, max: 50 }}
@@ -29,4 +29,4 @@ const Conver = ({ img, menutitle, descrption }) => {
     );
 };
 
-export default Conver;
+export default Cover;
