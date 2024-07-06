@@ -23,12 +23,12 @@ const Menu = () => {
     return (
         <div>
             <Helmet>
-                <title>FambZone || menu</title>
+                <title>FambZone || Menu</title>
             </Helmet>
 
             <Cover
                 img={imgCover}
-                menutitle={'Our Menu'}
+                title={'Our Menu'}
                 descrption={'Would you like to try a dish'}
             ></Cover>
 
@@ -41,6 +41,7 @@ const Menu = () => {
 
             <MenuCategory
                 item={offered}
+                title={'offered'}
             ></MenuCategory>
 
             <div className="text-center mt-6">
@@ -50,15 +51,11 @@ const Menu = () => {
             </div>
 
             <div>
-                <Cover
-                    img={DessertImg}
-                    menutitle={'dessert'}
-                    descrption={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nam aut cum earum dolore nihil culpa veniam unde laborum '}
-                >
-                </Cover>
             </div>
             <MenuCategory
                 item={dessert}
+                title={'dessert'}
+                img={DessertImg}
             ></MenuCategory>
 
             <div className="text-center">
@@ -67,14 +64,11 @@ const Menu = () => {
                 ></SectionTitle>
             </div>
             <div>
-                <Cover
-                    img={pizzaImg}
-                    menutitle={'Pizza'}
-                    descrption={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nam aut cum earum dolore nihil culpa veniam unde laborum'}
-                ></Cover>
             </div>
             <MenuCategory
                 item={pizza}
+                title={'pizza'}
+                img={pizzaImg}
             ></MenuCategory>
 
             <div className="text-center uppercase mt-5">
@@ -82,15 +76,11 @@ const Menu = () => {
                     heading={'Order your Favourite food'}
                 ></SectionTitle>
             </div>
-            <div>
-                <Cover
-                    img={saladImg}
-                    menutitle={'Salads'}
-                    descrption={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nam aut cum earum dolore nihil culpa veniam unde laborum'}
-                ></Cover>
-            </div>
+           
             <MenuCategory
                 item={salad}
+                title={'salad'}
+                img={saladImg}
             ></MenuCategory>
 
             <div className="text-center uppercase">
@@ -98,15 +88,11 @@ const Menu = () => {
                     heading={'Oder you Favourite Food'}
                 ></SectionTitle>
             </div>
-            <div>
-                <Cover
-                    img={soupImg}
-                    menutitle={'Shops'}
-                    descrption={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nam aut cum earum dolore nihil culpa veniam unde laborum'}
-                ></Cover>
-            </div>
+            
             <MenuCategory
                 item={soups}
+                title={'soups'}
+                img={soupImg}
             ></MenuCategory>
         </div>
     );

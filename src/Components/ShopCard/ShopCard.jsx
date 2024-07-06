@@ -9,12 +9,12 @@ const ShopCard = ({ item }) => {
                     src={image}
                     alt="Shoes" />
             </figure>
-            <div className="card-body">
+            <div className="card-body flex flex-col items-center">
                 <h2 className="card-title">{name}</h2>
                 <p>Price: {price} $</p>
                 <p>{recipe}</p>
-                <div className="card-actions content-center ml-28">
-                    <button className="btn btn-primary ">Add to Card</button>
+                <div className="card-actions ">
+                    <button className="btn btn-outline btn-warning mt-2 border-0 border-b-4">Add to Card</button>
                 </div>
             </div>
         </div>
