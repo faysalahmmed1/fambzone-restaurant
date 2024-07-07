@@ -1,11 +1,12 @@
 
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
   return (
     <>
-    <h1>hwllo</h1>
+    <h1></h1>
       <button className="btn btn-info">Info</button>
       <button className="btn btn-success">Success</button>
       <button className="btn btn-warning">Warning</button>

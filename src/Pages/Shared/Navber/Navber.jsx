@@ -8,6 +8,7 @@ const Navber = () => {
         <li><Link to={'/deshboard'}>DeshBoard</Link></li>
         <li><Link to={'/menu'}>Our Menu</Link></li>
         <li><Link to={'/order/salad'}>Food Order</Link></li>
+        <li><Link to={'/login'}>Login</Link></li>
     </>
 
     return (
@@ -43,7 +44,7 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <li><Link to={'/login'}>Profile</Link></li>
                 </div>
             </div>
         </>
