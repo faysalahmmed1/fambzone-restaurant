@@ -1,14 +1,36 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
+import { FaShoppingCart } from "react-icons/fa";
 
 
 const Navber = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
     const navOption = <>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/contact'}>Contacts Us</Link> </li>
         <li><Link to={'/deshboard'}>DeshBoard</Link></li>
         <li><Link to={'/menu'}>Our Menu</Link></li>
+        <li><Link to={'/secret'}>Secret</Link></li>
         <li><Link to={'/order/salad'}>Food Order</Link></li>
-        <li><Link to={'/login'}>Login</Link></li>
+
+
+        {
+            user ? <>
+
+                <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
+            </> :
+                <>
+                    <li><Link to={'/login'}>Login</Link>
+                    </li></>
+        }
     </>
 
     return (
@@ -44,7 +66,19 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <li><Link to={'/login'}>Profile</Link></li>
+                    <li>
+                        {
+                            user ? <>{user?.displayName}</> : <></>
+                        }
+                    </li>
+                    <li>
+                        <Link to={'/'}>
+                            <button className="btn">
+                                <FaShoppingCart />
+                                <div className="badge badge-secondary">+0</div>
+                            </button>
+                        </Link>
+                    </li>
                 </div>
             </div>
         </>
