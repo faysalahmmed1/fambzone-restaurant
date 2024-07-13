@@ -8,11 +8,16 @@ import Main from "../Layout/Main.jsx";
 import Menu from "../Pages/Menu/Menu/Menu.jsx";
 import Order from "../Pages/Order/Order/Order.jsx";
 import Contacts from "../Components/Contacts/Contacts.jsx";
-import Deshboard from "../Components/Deshboard/Deshboard.jsx";
 import Login from "../Pages/Login/Login/Login.jsx";
 import SignUp from "../Pages/SignUp/SignUP/SignUp.jsx";
 import PriveteRoutes from "./PriveteRoutes.jsx";
 import Secret from "../Pages/Shared/Secret/Secret.jsx";
+import DashBoard from "../Layout/DashBoard.jsx";
+import Cart from "../Pages/DashBoard/Cart/Cart.jsx";
+import UserHome from "../Pages/DashBoard/UserHome/UserHome.jsx";
+import Reservation from "../Pages/DashBoard/Reservation/Reservation.jsx";
+import Review from "../Pages/DashBoard/Review/Review.jsx";
+import Booking from "../Pages/DashBoard/Booking/Booking.jsx";
 
 
 export const router = createBrowserRouter([
@@ -38,10 +43,6 @@ export const router = createBrowserRouter([
                 element: <Contacts></Contacts>
             },
             {
-                path: '/deshboard',
-                element: <Deshboard></Deshboard>
-            },
-            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -55,4 +56,33 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "/dashboard",
+        element: <DashBoard></DashBoard>,
+        children: [
+            {
+                path: 'dashboard/user',
+                element: <UserHome></UserHome>
+            },
+            {
+                path: 'dashboard/reservation',
+                element: <Reservation></Reservation>
+            },
+            {
+                path: 'dashboard/cart',
+                element: <Cart></Cart>
+            },
+
+            {
+                path: 'dashboard/review',
+                element: <Review></Review>
+            },
+            {
+                path: 'dashboard/booking',
+                element: <Booking></Booking>
+            }
+
+
+        ]
+    }
 ]);

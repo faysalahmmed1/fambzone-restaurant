@@ -17,7 +17,6 @@ const Navber = () => {
     const navOption = <>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link to={'/contact'}>Contacts Us</Link> </li>
-        <li><Link to={'/deshboard'}>DeshBoard</Link></li>
         <li><Link to={'/menu'}>Our Menu</Link></li>
         <li><Link to={'/secret'}>Secret</Link></li>
         <li><Link to={'/order/salad'}>Food Order</Link></li>
@@ -67,13 +66,14 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <li>
+                    <>
                         {
                             user ? <>{user?.displayName}</> : <></>
                         }
-                    </li>
+                        
+                    </>
                     <li>
-                        <Link to={'/'}>
+                        <Link to={'/dashboard'}>
                             <button className="btn">
                                 <FaShoppingCart />
                                 <div className="badge badge-secondary">+${cart.length}</div>
