@@ -4,6 +4,8 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2'
+import SocalLogin from '../../../Components/SocalLogin/SocalLogin';
+
 
 
 const Login = () => {
@@ -110,7 +112,11 @@ const Login = () => {
                                 </div>
 
                             </form>
-                            <p className='text-center mb-2 '><small>New Here</small> <Link to={'/signup'} className='text-lime-600'>Register</Link></p>
+                            <p className='text-center '><small>New Here</small> <Link to={'/signup'} className='text-lime-600'>Register</Link></p>
+                            
+                            <SocalLogin></SocalLogin>
+
+
                         </div>
                     </div>
                 </div>

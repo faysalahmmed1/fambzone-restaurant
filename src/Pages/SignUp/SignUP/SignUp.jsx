@@ -4,14 +4,15 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from 'sweetalert2'
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import SocalLogin from "../../../Components/SocalLogin/SocalLogin";
 
 
 const SignUp = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
-    const navigate = useNavigate();
-
-
     const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic()
 
     const onSubmit = data => {
         console.log(data);
@@ -21,12 +22,20 @@ const SignUp = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        console.log('user profile info updated')
-                        reset();
-                        Swal.fire("user created successfully!");
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    reset();
+                                    Swal.fire("User created successfully!");
+                                }
+                            })
                     })
                     .catch(error => console.log(error));
-                    navigate("/");
+                navigate("/");
             })
     };
 
@@ -93,6 +102,7 @@ const SignUp = () => {
 
                         </form>
                         <p className='text-center mb-2 '><small>Already you have an Accout</small> <Link to={'/login'} className='text-lime-600'>Login</Link></p>
+                        <SocalLogin></SocalLogin>
                     </div>
                 </div>
             </div>

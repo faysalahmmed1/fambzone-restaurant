@@ -1,42 +1,77 @@
-import { FaCartArrowDown, FaFileContract, FaHome, FaJediOrder, FaResolving, FaUser } from "react-icons/fa";
-import { FaBookJournalWhills, FaRegUser} from "react-icons/fa6";
+import { FaCartArrowDown, FaFileContract, FaHome, FaJediOrder, FaList, FaResolving, FaUser, FaUsers, FaUtensils } from "react-icons/fa";
+import { FaBookJournalWhills, FaHouseMedical, FaRegUser } from "react-icons/fa6";
 import { NavLink, Outlet } from "react-router-dom";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 
 
 const DashBoard = () => {
-    const [cart ]= useCart();
+    const [cart] = useCart();
+    const [isAdmin] = useAdmin();
     return (
         <div className="flex">
             <div className="w-64 min-h-screen bg-orange-100">
                 <ul className="menu">
-                    <li>
-                        <NavLink className='text-black' to={'dashboard/user'}>
-                            <FaUser></FaUser>
-                            user</NavLink>
+                    {
+                        isAdmin ?
+                            <>
+                             <li>
+                        <NavLink className='text-black' to={'dashboard/adminHome'}>
+                            <FaHouseMedical></FaHouseMedical>
+                            Admin Home</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/reservation'}>
-                            <FaRegUser></FaRegUser>
-                            Reservation</NavLink>
+                        <NavLink className='text-black' to={'dashboard/additems'}>
+                            <FaUtensils></FaUtensils>
+                            Add Items</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/cart'}>
-                            <FaCartArrowDown></FaCartArrowDown>
-                            Cart ({cart.length})</NavLink>
+                        <NavLink className='text-black' to={'dashboard/manageitems'}>
+                            <FaList></FaList>
+                            Manage Items</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/review'}>
+                        <NavLink className='text-black' to={'dashboard/managebooking'}>
                             <FaResolving></FaResolving>
-                            Review</NavLink>
+                            Manage Booking</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/booking'}>
-                            <FaBookJournalWhills></FaBookJournalWhills>
-                            My Booking</NavLink>
+                        <NavLink className='text-black' to={'dashboard/users'}>
+                            <FaUsers></FaUsers>
+                            All Users</NavLink>
                     </li>
+                            </>
+                            :
+                            <>
+                                <li>
+                                    <NavLink className='text-black' to={'dashboard/user'}>
+                                        <FaUser></FaUser>
+                                        user</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='text-black' to={'dashboard/reservation'}>
+                                        <FaRegUser></FaRegUser>
+                                        Reservation</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='text-black' to={'dashboard/cart'}>
+                                        <FaCartArrowDown></FaCartArrowDown>
+                                        Cart ({cart.length})</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='text-black' to={'dashboard/review'}>
+                                        <FaResolving></FaResolving>
+                                        Review</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink className='text-black' to={'dashboard/booking'}>
+                                        <FaBookJournalWhills></FaBookJournalWhills>
+                                        My Booking</NavLink>
+                                </li>
+                            </>
+                    }
 
                     <div className="divider divider-warning p-3">
                         or
@@ -49,7 +84,7 @@ const DashBoard = () => {
                     </li>
                     <li>
                         <NavLink className='text-black' to={'/menu'}>
-                        <MdOutlineRestaurantMenu />
+                            <MdOutlineRestaurantMenu />
                             Menu</NavLink>
                     </li>
                     <li>

@@ -18,6 +18,7 @@ import UserHome from "../Pages/DashBoard/UserHome/UserHome.jsx";
 import Reservation from "../Pages/DashBoard/Reservation/Reservation.jsx";
 import Review from "../Pages/DashBoard/Review/Review.jsx";
 import Booking from "../Pages/DashBoard/Booking/Booking.jsx";
+import AllUsers from "../Pages/DashBoard/AllUsers/AllUsers.jsx";
 
 
 export const router = createBrowserRouter([
@@ -58,7 +59,7 @@ export const router = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <DashBoard></DashBoard>,
+        element: <PriveteRoutes><DashBoard></DashBoard></PriveteRoutes>,
         children: [
             {
                 path: 'dashboard/user',
@@ -80,7 +81,14 @@ export const router = createBrowserRouter([
             {
                 path: 'dashboard/booking',
                 element: <Booking></Booking>
+            },
+
+            // Admin Site 
+            {
+                path: 'dashboard/users',
+                element: <AllUsers></AllUsers>
             }
+
 
 
         ]
