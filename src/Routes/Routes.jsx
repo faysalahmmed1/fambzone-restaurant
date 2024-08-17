@@ -19,6 +19,8 @@ import Reservation from "../Pages/DashBoard/Reservation/Reservation.jsx";
 import Review from "../Pages/DashBoard/Review/Review.jsx";
 import Booking from "../Pages/DashBoard/Booking/Booking.jsx";
 import AllUsers from "../Pages/DashBoard/AllUsers/AllUsers.jsx";
+import AddItems from "../Pages/DashBoard/AddItems/AddItems.jsx";
+import AdminRoutes from "./AdminRoutes.jsx";
 
 
 export const router = createBrowserRouter([
@@ -61,32 +63,40 @@ export const router = createBrowserRouter([
         path: "/dashboard",
         element: <PriveteRoutes><DashBoard></DashBoard></PriveteRoutes>,
         children: [
+
+            // Normal users
             {
-                path: 'dashboard/user',
+                path: 'user',
                 element: <UserHome></UserHome>
             },
             {
-                path: 'dashboard/reservation',
+                path: 'reservation',
                 element: <Reservation></Reservation>
             },
             {
-                path: 'dashboard/cart',
+                path: 'cart',
                 element: <Cart></Cart>
             },
 
             {
-                path: 'dashboard/review',
+                path: 'review',
                 element: <Review></Review>
             },
             {
-                path: 'dashboard/booking',
+                path: 'booking',
                 element: <Booking></Booking>
             },
 
+
+
             // Admin Site 
             {
-                path: 'dashboard/users',
-                element: <AllUsers></AllUsers>
+                path: 'users',
+                element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>
+            },
+            {
+                path: 'addItems',
+                element: <AdminRoutes><AddItems></AddItems></AdminRoutes>
             }
 
 

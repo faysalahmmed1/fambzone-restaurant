@@ -18,27 +18,27 @@ const DashBoard = () => {
                         isAdmin ?
                             <>
                              <li>
-                        <NavLink className='text-black' to={'dashboard/adminHome'}>
+                        <NavLink className='text-black' to={'adminHome'}>
                             <FaHouseMedical></FaHouseMedical>
                             Admin Home</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/additems'}>
+                        <NavLink className='text-black' to={'additems'}>
                             <FaUtensils></FaUtensils>
                             Add Items</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/manageitems'}>
+                        <NavLink className='text-black' to={'manageitems'}>
                             <FaList></FaList>
                             Manage Items</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/managebooking'}>
+                        <NavLink className='text-black' to={'managebooking'}>
                             <FaResolving></FaResolving>
                             Manage Booking</NavLink>
                     </li>
                     <li>
-                        <NavLink className='text-black' to={'dashboard/users'}>
+                        <NavLink className='text-black' to={'users'}>
                             <FaUsers></FaUsers>
                             All Users</NavLink>
                     </li>
