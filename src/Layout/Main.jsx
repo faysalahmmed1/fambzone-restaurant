@@ -9,6 +9,7 @@ const Main = () => {
     return (
         <div>
             {/* {noHeaderFotter || <Navber></Navber>} */}
+            
             <Navber></Navber>
 
             <Outlet></Outlet>

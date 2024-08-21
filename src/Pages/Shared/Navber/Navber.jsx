@@ -23,10 +23,12 @@ const Navber = () => {
 
 
         {
-            user ? <>
+            user ?
+                <>
 
-                <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
-            </> :
+                    <button onClick={handleLogOut} className="btn btn-active btn-ghost">LogOut</button>
+                </>
+                :
                 <>
                     <li><Link to={'/login'}>Login</Link>
                     </li></>
@@ -70,7 +72,7 @@ const Navber = () => {
                         {
                             user ? <>{user?.displayName}</> : <></>
                         }
-                        
+
                     </>
                     <li>
                         <Link to={'/dashboard'}>

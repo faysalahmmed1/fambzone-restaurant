@@ -21,6 +21,7 @@ import Booking from "../Pages/DashBoard/Booking/Booking.jsx";
 import AllUsers from "../Pages/DashBoard/AllUsers/AllUsers.jsx";
 import AddItems from "../Pages/DashBoard/AddItems/AddItems.jsx";
 import AdminRoutes from "./AdminRoutes.jsx";
+import ManageItems from "../Pages/DashBoard/ManageItems/ManageItems.jsx";
 
 
 export const router = createBrowserRouter([
@@ -97,6 +98,10 @@ export const router = createBrowserRouter([
             {
                 path: 'addItems',
                 element: <AdminRoutes><AddItems></AddItems></AdminRoutes>
+            },
+            {
+                path: 'manageitems',
+                element: <AdminRoutes><ManageItems></ManageItems></AdminRoutes>
             }
 
 
