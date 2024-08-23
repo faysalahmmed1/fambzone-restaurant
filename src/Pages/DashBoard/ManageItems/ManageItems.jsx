@@ -3,6 +3,7 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import useMenu from "../../../hooks/useMenu";
 import Swal from "sweetalert2";
 import useAxiosSecoure from "../../../hooks/useAxiosSecoure";
+import { Link } from "react-router-dom";
 
 
 
@@ -35,7 +36,7 @@ const ManageItems = () => {
                 }
 
 
-              
+
             }
         });
 
@@ -81,9 +82,11 @@ const ManageItems = () => {
                                 <td>{item.price}</td>
 
                                 <td>
-                                    <button className="btn btn-ghost btn-sm bg-orange-400">
-                                        <FaEdit className="text-white text-2xl"></FaEdit>
-                                    </button>
+                                    <Link to={`/dashboard/updateitem/${item._id}`}>
+                                        <button className="btn btn-ghost btn-sm bg-orange-400">
+                                            <FaEdit className="text-white text-2xl"></FaEdit>
+                                        </button>
+                                    </Link>
                                 </td>
                                 <td>
                                     <button onClick={() => handleDeleteItem(item)}
