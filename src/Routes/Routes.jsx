@@ -23,6 +23,7 @@ import AddItems from "../Pages/DashBoard/AddItems/AddItems.jsx";
 import AdminRoutes from "./AdminRoutes.jsx";
 import ManageItems from "../Pages/DashBoard/ManageItems/ManageItems.jsx";
 import UpdateItem from "../Pages/DashBoard/UpdateItem/UpdateItem.jsx";
+import Payment from "../Pages/DashBoard/Payment/Payment.jsx";
 
 
 export const router = createBrowserRouter([
@@ -68,30 +69,44 @@ export const router = createBrowserRouter([
 
             // Normal users
             {
+                path: '',
+                element: <Cart></Cart>
+            },
+            {
+                path:'carts',
+                element:<Cart></Cart>
+            },
+
+            {
+                path: 'payment',
+                element: <Payment></Payment>
+            },
+
+            {
                 path: 'user',
                 element: <UserHome></UserHome>
             },
+
             {
                 path: 'reservation',
                 element: <Reservation></Reservation>
             },
-            {
-                path: 'cart',
-                element: <Cart></Cart>
-            },
-
+           
             {
                 path: 'review',
                 element: <Review></Review>
             },
+
             {
                 path: 'booking',
                 element: <Booking></Booking>
             },
+            
 
 
 
-            // Admin Site 
+            // Admin Site
+            
             {
                 path: 'users',
                 element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>

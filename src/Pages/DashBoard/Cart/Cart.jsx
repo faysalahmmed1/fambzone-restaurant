@@ -4,6 +4,7 @@ import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 import { FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAxiosSecoure from '../../../hooks/useAxiosSecoure';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const [cart, refetch] = useCart();
@@ -50,7 +51,14 @@ const Cart = () => {
                 <div className=' flex justify-between mt-2 mx-5 text-black rounded-md '>
                     <h1>Item:{cart.length}</h1>
                     <h1>Total Price:{totalprice.toFixed(2)}</h1>
-                    <button className='btn btn-primary'>Pay</button>
+                    {
+                        cart.length
+                            ?
+                            <Link to='/dashboard/payment'><button className='btn btn-primary'>Pay</button></Link>
+                            :
+                            <button disabled className='btn btn-primary'>Pay</button>
+
+                    }
                 </div>
             </div>
 

@@ -46,27 +46,27 @@ const DashBoard = () => {
                             :
                             <>
                                 <li>
-                                    <NavLink className='text-black' to={'dashboard/user'}>
+                                    <NavLink className='text-black' to={'user'}>
                                         <FaUser></FaUser>
                                         user</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className='text-black' to={'dashboard/reservation'}>
+                                    <NavLink className='text-black' to={'reservation'}>
                                         <FaRegUser></FaRegUser>
                                         Reservation</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className='text-black' to={'dashboard/cart'}>
+                                    <NavLink className='text-black' to={'carts'}>
                                         <FaCartArrowDown></FaCartArrowDown>
                                         Cart ({cart.length})</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className='text-black' to={'dashboard/review'}>
+                                    <NavLink className='text-black' to={'review'}>
                                         <FaResolving></FaResolving>
                                         Review</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className='text-black' to={'dashboard/booking'}>
+                                    <NavLink className='text-black' to={'booking'}>
                                         <FaBookJournalWhills></FaBookJournalWhills>
                                         My Booking</NavLink>
                                 </li>
