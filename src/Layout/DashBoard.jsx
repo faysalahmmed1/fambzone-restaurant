@@ -48,7 +48,7 @@ const DashBoard = () => {
                                 <li>
                                     <NavLink className='text-black' to={'user'}>
                                         <FaUser></FaUser>
-                                        user</NavLink>
+                                        User Home</NavLink>
                                 </li>
                                 <li>
                                     <NavLink className='text-black' to={'reservation'}>

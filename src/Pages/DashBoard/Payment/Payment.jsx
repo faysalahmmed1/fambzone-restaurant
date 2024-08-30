@@ -1,6 +1,11 @@
 import { loadStripe } from "@stripe/stripe-js";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { Elements } from "@stripe/react-stripe-js";
+import CheckOutForm from "./CheckOut/CheckoutForm";
+
+
+
+
 //TO DO: 
 const stripePromise = loadStripe('')
 const Payment = () => {
@@ -12,7 +17,9 @@ const Payment = () => {
                 </SectionTitle>
             </div>
             <div>
-                <Elements stripe={stripePromise}></Elements>
+                <Elements stripe={stripePromise}>
+                    <CheckOutForm></CheckOutForm>
+                </Elements>
             </div>
         </div>
     );

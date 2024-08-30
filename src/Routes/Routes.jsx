@@ -24,6 +24,7 @@ import AdminRoutes from "./AdminRoutes.jsx";
 import ManageItems from "../Pages/DashBoard/ManageItems/ManageItems.jsx";
 import UpdateItem from "../Pages/DashBoard/UpdateItem/UpdateItem.jsx";
 import Payment from "../Pages/DashBoard/Payment/Payment.jsx";
+import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome.jsx";
 
 
 export const router = createBrowserRouter([
@@ -73,8 +74,8 @@ export const router = createBrowserRouter([
                 element: <Cart></Cart>
             },
             {
-                path:'carts',
-                element:<Cart></Cart>
+                path: 'carts',
+                element: <Cart></Cart>
             },
 
             {
@@ -91,7 +92,7 @@ export const router = createBrowserRouter([
                 path: 'reservation',
                 element: <Reservation></Reservation>
             },
-           
+
             {
                 path: 'review',
                 element: <Review></Review>
@@ -101,12 +102,16 @@ export const router = createBrowserRouter([
                 path: 'booking',
                 element: <Booking></Booking>
             },
-            
+
 
 
 
             // Admin Site
-            
+            {
+                path: 'adminHome',
+                element: <AdminRoutes><AdminHome></AdminHome></AdminRoutes>
+            },
+
             {
                 path: 'users',
                 element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>

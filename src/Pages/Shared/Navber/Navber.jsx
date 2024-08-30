@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
+import useAdmin from "../../../hooks/useAdmin";
 
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext);
+    const [isAdmin] = useAdmin();
     const [cart] = useCart();
     const handleLogOut = () => {
         logOut()
@@ -20,6 +22,14 @@ const Navber = () => {
         <li><Link to={'/menu'}>Our Menu</Link></li>
         <li><Link to={'/secret'}>Secret</Link></li>
         <li><Link to={'/order/salad'}>Food Order</Link></li>
+
+        {
+            user && isAdmin && <li><Link to={'dashboard/adminHome'}></Link></li>
+        }
+        {
+            user && !isAdmin && <li><Link to={'dashboard/userHome'}></Link></li>
+        }
+
 
 
         {
