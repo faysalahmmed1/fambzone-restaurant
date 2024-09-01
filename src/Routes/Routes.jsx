@@ -127,7 +127,7 @@ export const router = createBrowserRouter([
             {
                 path: 'updateitem/:id',
                 element: <AdminRoutes><UpdateItem></UpdateItem></AdminRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/menu/${params.id}`)
+                loader: ({ params }) => fetch(`https://fambzone-server.vercel.app/menu/${params.id}`)
             }
 
 
