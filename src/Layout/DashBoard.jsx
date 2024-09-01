@@ -32,11 +32,13 @@ const DashBoard = () => {
                             <FaList></FaList>
                             Manage Items</NavLink>
                     </li>
+
                     <li>
-                        <NavLink className='text-black' to={'managebooking'}>
+                        <NavLink className='text-black' to={'booking'}>
                             <FaResolving></FaResolving>
-                            Manage Booking</NavLink>
+                            Booking</NavLink>
                     </li>
+
                     <li>
                         <NavLink className='text-black' to={'users'}>
                             <FaUsers></FaUsers>
