@@ -19,7 +19,7 @@ const Contacts = () => {
                     <input type="text" className="grow" placeholder="Search" />
                 </label>
                 <br />
-                <button className="btn btn-outline mb-5 btn-primary">Primary</button>
+                <button className="btn btn-outline mb-5 btn-primary">Submit</button>
                 
             </div>
         </div>
