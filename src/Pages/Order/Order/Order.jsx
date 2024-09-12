@@ -25,7 +25,7 @@ const Order = () => {
     const dessert = menu.filter(item => item.category === 'dessert');
     const drinks = menu.filter(item => item.category === 'drinks')
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>FambZone || Order</title>
             </Helmet>

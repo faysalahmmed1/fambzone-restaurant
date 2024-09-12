@@ -21,7 +21,7 @@ const Menu = () => {
 
 
     return (
-        <div>
+        <div className="bg-amber-950 md:h-full">
             <Helmet>
                 <title>FambZone || Menu</title>
             </Helmet>
