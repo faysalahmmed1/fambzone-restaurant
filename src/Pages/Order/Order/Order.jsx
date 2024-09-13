@@ -45,11 +45,13 @@ const Order = () => {
 
                     </TabList>
 
-                    <TabPanel>
-                        <OrderTab
-                            item={salad}
-                        ></OrderTab>
-                    </TabPanel>
+                    <div className="p-5 sm:p-2 md:p-4 lg:p-5">
+                        <TabPanel>
+                            <OrderTab
+                                item={salad}
+                            ></OrderTab>
+                        </TabPanel>
+                    </div>
                     <TabPanel>
                         <OrderTab
                             item={dessert}
