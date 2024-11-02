@@ -1,7 +1,5 @@
 
-
 import axios from "axios";
-
 const axiosPublic = axios.create({
     baseURL: 'https://fambzone-server.vercel.app',
     timeout: 1000,

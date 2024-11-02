@@ -74,7 +74,9 @@ const Login = () => {
                         <div className="text-center md:w-1/2 lg:text-left">
                             <h1 className="text-5xl font-bold">Login</h1>
                             <p className="py-6">
-                                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                                If you want to view the admin page,
+                                <span className=' text-red-500'> email: fambzone@gmail.com and password: FambZone@123
+                                </span>
                             </p>
                         </div>
 
@@ -113,7 +115,7 @@ const Login = () => {
 
                             </form>
                             <p className='text-center '><small>New Here</small> <Link to={'/signup'} className='text-lime-600'>Register</Link></p>
-                            
+
                             <SocalLogin></SocalLogin>
 
 
